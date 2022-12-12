@@ -14,8 +14,8 @@ class ApiService {
     if (response.statusCode == 200) {
       final List<dynamic> webtoons = jsonDecode(response.body);
       for (var webtoon in webtoons) {
-        final toon = WebtoonModel.fromJson(webtoon);
-        webtoonInstances.add(toon);
+        final instance = WebtoonModel.fromJson(webtoon);
+        webtoonInstances.add(instance);
       }
       return webtoonInstances;
     }
